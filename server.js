@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const keys = require("./config/keys");
+const items = require("./routes/api/items");
 
 const app = new express();
 const db = keys.mongoURI;
@@ -17,6 +18,8 @@ mongoose
 
 const PORT = process.env.PORT || 5000;
 
-app.use(bodyParser.json());
+app.use("/api/items", items);
 
-app.listen(PORT, console.log("Server Running"));
+app.use(express.json());
+
+app.listen(PORT, console.log(`Server Running at ${PORT}`));
