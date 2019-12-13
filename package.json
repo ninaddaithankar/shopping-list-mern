@@ -1,32 +1,33 @@
 {
-  "name": "shopping-list-mern",
-  "version": "1.0.0",
-  "description": "Shopping list using the MERN Stack",
-  "main": "server.js",
-  "scripts": {
-    "client install": "npm install --prefix client",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ninaddaithankar/shopping-list-mern.git"
-  },
-  "author": "Ninad Daithankar",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ninaddaithankar/shopping-list-mern/issues"
-  },
-  "homepage": "https://github.com/ninaddaithankar/shopping-list-mern#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.0.1",
-    "express": "^4.17.1",
-    "mongoose": "^5.8.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.4"
-  }
+	"name": "shopping-list-mern",
+	"version": "1.0.0",
+	"description": "Shopping list using the MERN Stack",
+	"main": "server.js",
+	"scripts": {
+		"client install": "npm install --prefix client",
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ninaddaithankar/shopping-list-mern.git"
+	},
+	"author": "Ninad Daithankar",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ninaddaithankar/shopping-list-mern/issues"
+	},
+	"homepage": "https://github.com/ninaddaithankar/shopping-list-mern#readme",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"concurrently": "^5.0.1",
+		"express": "^4.17.1",
+		"mongoose": "^5.8.0"
+	},
+	"devDependencies": {
+		"nodemon": "^1.19.4"
+	}
 }
